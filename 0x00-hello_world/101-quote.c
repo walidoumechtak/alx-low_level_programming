@@ -7,5 +7,7 @@
 
 int main(void)
 {
-	write(2, "and that piece of art is useful" - Dora Korpar, 2015-10-19\n", 50);
+	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(2, str, 58);
+	write(2, "\n", 1);
 }
