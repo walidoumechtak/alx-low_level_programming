@@ -11,7 +11,7 @@ int main(void)
 	int	i;
 
 	i = 0;
-	arr = "0123456789ABCDEF";
+	arr = "0123456789abcdef";
 	while (i <= 15)
 		putchar(arr[i++]);
 	putchar('\n');
