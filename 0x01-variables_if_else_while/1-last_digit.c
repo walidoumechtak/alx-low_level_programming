@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * main - the start of every program 
+ * main - the start of every program
  * Return: 0 is success or !0 if fail
  */
 
 int main(void)
 {
-	int n;
+	int	n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
