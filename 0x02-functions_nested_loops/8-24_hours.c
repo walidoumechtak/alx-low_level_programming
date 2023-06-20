@@ -4,6 +4,11 @@
  * jack_bauer - print all minit starting from 00:00 to 23:59
  */
 
+/**
+ * _putnbr - function that print a number 
+ * @n: the number
+ */
+
 void	_putnbr(int n)
 {
 	if (n >= 10)
