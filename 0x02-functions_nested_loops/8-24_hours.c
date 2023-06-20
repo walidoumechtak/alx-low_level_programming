@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - print all minit starting from 00:00 to 23:59
- * _putinbr - function that print a number 
+ * _putnbr - function that print a number
  * @n: the number
  */
 
@@ -12,6 +11,10 @@ void	_putnbr(int n)
 		_putnbr(n / 10);
 	_putchar(n % 10 + '0');
 }
+
+/**
+ * jack_bauer - print all minit starting from 00:00 to 23:59
+ */
 
 void	jack_bauer(void)
 {
