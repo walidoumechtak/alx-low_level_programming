@@ -15,8 +15,8 @@ void more_numbers(void)
 	while (i < 10)
 	{
 		s = 0;
-		while (s[i])
-			_putchar(s[i++]);
+		while (arr[i])
+			_putchar(arr[i++]);
 		_putchar('\n');
 		i++;
 	}
