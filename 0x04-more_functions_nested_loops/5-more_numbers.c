@@ -6,17 +6,17 @@
 
 void more_numbers(void)
 {
-	int	s;
 	int	i;
 	char	*arr;
+	int	s;
 
 	arr = "01234567891011121314";
 	i = 0;
 	while (i < 10)
 	{
 		s = 0;
-		while (arr[i])
-			_putchar(arr[i++]);
+		while (arr[s])
+			_putchar(arr[s++]);
 		_putchar('\n');
 		i++;
 	}
