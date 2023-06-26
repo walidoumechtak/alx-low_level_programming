@@ -15,4 +15,5 @@ void	puts2(char *str)
 		write(1, &str[i], 1);
 		i = i + 2;
 	}
+	write(1, "\n", 1);
 }
