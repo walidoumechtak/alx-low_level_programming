@@ -29,7 +29,9 @@ void	rev_string(char *s)
 
 	start = 0;
 	end = _strlen(s) - 1;
-	while (start != end)
+	if (end < 0)
+		end = 0;
+	while (start < end)
 	{
 		temp = s[start];
 		s[start] = s[end];
