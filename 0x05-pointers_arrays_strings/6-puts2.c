@@ -13,7 +13,12 @@ void	puts2(char *str)
 	while (str[i])
 	{
 		write(1, &str[i], 1);
-		i = i + 2;
+		i++;
+		if (s[i] == '\0')
+			break;
+		i++;
+		if (s[i] == '\0')
+			break;
 	}
 	write(1, "\n", 1);
 }
