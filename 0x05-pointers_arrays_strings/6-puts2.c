@@ -14,10 +14,10 @@ void	puts2(char *str)
 	{
 		write(1, &str[i], 1);
 		i++;
-		if (s[i] == '\0')
+		if (str[i] == '\0')
 			break;
 		i++;
-		if (s[i] == '\0')
+		if (str[i] == '\0')
 			break;
 	}
 	write(1, "\n", 1);
