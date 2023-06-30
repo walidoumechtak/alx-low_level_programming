@@ -2,9 +2,10 @@
 #include <string.h>
 
 /**
- * _strcat - funct that append src in dest
+ * _strncat - funct that append src in dest
  * @dest: the dest string
  * @src: the src string
+ * @n: n byte that should be copyed
  * Return: new string concatenated
  */
 
