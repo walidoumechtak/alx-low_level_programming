@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	int	j;
 
 	if (!s1 && !s2)
-		return (NULL);
+		return (strdup("\0"));
 	if (!s1)
 		return (strdup(s2));
 	if (!s2)
