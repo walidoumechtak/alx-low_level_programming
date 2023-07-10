@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  * str_concat - concate two string in a single buffer
  * @s1: the first string
