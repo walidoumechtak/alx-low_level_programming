@@ -2,6 +2,22 @@
 #include <string.h>
 
 /**
+ * freeall - free all element of the array
+ * @arr: the double pointer
+ * @size: the that should be freed
+ */
+
+void	freeall(int	**arr, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+		free(arr[i++]);
+	free(arr);
+}
+
+/**
  * fille_inside - fill the intern alloc
  * @inside: the array
  * @w: the width or the size of inside
@@ -26,11 +42,11 @@ void	fille_inside(int *inside, int w)
  * Return: return the dimension array
  */
 
-int **alloc_grid(int width, int height)
+int	**alloc_grid(int width, int height)
 {
-	int     i;
-	int     **arr;
-	int     *inside;
+	int	i;
+	int	**arr;
+	int	*inside;
 	
 	if (width <= 0 || height <= 0)
 		return (NULL);
@@ -42,7 +58,7 @@ int **alloc_grid(int width, int height)
 	{
 		inside = malloc(width * sizeof(int));
 		if (!inside)
-			return (NULL);
+			return (freeall(arr, i), NULL);
 		fille_inside(inside, width);
 		arr[i] = inside;
 		i++;
