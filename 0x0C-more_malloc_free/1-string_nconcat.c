@@ -9,7 +9,7 @@
  * Return: the concatinated string
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char	*string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char	*str;
 	unsigned int	i;
@@ -33,4 +33,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		str[j++] = s2[i++];
 	str[j] = '\0';
 	return (str);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char *con = string_nconcat("walid", "", 12);
+	printf("%s\n", con);
 }
