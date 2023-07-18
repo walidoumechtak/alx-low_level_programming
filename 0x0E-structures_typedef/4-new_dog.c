@@ -1,4 +1,4 @@
-#inlcude "dog.h"
+#include "dog.h"
 
 /**
  * new_dog - function that alloc a new dog
