@@ -4,12 +4,6 @@
 #include <stdio.h>
 
 /**
- * dog_t - Typedef for dog
- */
-
-typedef dog dog_t;
-
-/**
  * struct dog - dog struct that containe name and other stuff
  * @name: the name of the dog
  * @age: the age of the dog
@@ -23,6 +17,12 @@ struct dog
 	float	age;
 	char	*owner;
 };
+
+/**
+ * dog_t - Typedef for dog
+ */
+
+typedef dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
