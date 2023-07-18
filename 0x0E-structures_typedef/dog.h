@@ -4,6 +4,12 @@
 #include <stdio.h>
 
 /**
+ * dog_t - Typedef for dog
+ */
+
+typedef dog dog_t;
+
+/**
  * struct dog - dog struct that containe name and other stuff
  * @name: the name of the dog
  * @age: the age of the dog
