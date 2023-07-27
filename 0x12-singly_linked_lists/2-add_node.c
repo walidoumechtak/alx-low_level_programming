@@ -6,7 +6,7 @@
  * Return: the length
  */
 
-int	_strlen(char *str)
+int	_strlen(const char *str)
 {
 	int	i;
 
@@ -29,26 +29,15 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t	*new;
 
-	new = malloc(sizeof(t_list));
+	new = malloc(sizeof(list_t));
 	if (!new)
 		return (NULL);
-	new->str = strdup((*head)->str);
-	new->len = _strlen((*head)->str);
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	if (head == NULL)
+		head = &new;
+	{
+		new->next = *head;
+	}
 	return (new);
 }
-
-int main()
-{
-list_t *head;
-
-    head = NULL;
-    add_node(&head, "Alexandro");
-    add_node(&head, "Asaia");
-    add_node(&head, "Augustin");
-    add_node(&head, "Bennett");
-    add_node(&head, "Bilal");
-    add_node(&head, "Chandler");
-    add_node(&head, "Damian");
-    add_node(&head, "Daniel");
-    add_node(&head, "Dora");
-    }
