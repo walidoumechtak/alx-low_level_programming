@@ -27,7 +27,7 @@ int	_strlen(char *str)
 
 list_t *add_node(list_t **head, const char *str)
 {
-	t_list	*new;
+	list_t	*new;
 
 	new = malloc(sizeof(t_list));
 	if (!new)
@@ -36,3 +36,19 @@ list_t *add_node(list_t **head, const char *str)
 	new->len = _strlen((*head)->str);
 	return (new);
 }
+
+int main()
+{
+list_t *head;
+
+    head = NULL;
+    add_node(&head, "Alexandro");
+    add_node(&head, "Asaia");
+    add_node(&head, "Augustin");
+    add_node(&head, "Bennett");
+    add_node(&head, "Bilal");
+    add_node(&head, "Chandler");
+    add_node(&head, "Damian");
+    add_node(&head, "Daniel");
+    add_node(&head, "Dora");
+    }
