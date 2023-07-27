@@ -30,9 +30,12 @@ list_t *add_node(list_t **head, const char *str)
 	list_t	*new;
 
 	new = malloc(sizeof(list_t));
-	if (!new || !str)
+	if (!new)
 		return (NULL);
-	new->str = strdup(str);
+	if (!str)
+		new->str = NULL;
+	else
+		new->str = strdup(str);
 	new->len = _strlen(str);
 	if (head == NULL || !*head)
 		head = &new;
