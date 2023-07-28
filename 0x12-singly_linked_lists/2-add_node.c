@@ -48,7 +48,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!new)
 		return (free_all(head), NULL);
 	if (!str)
-		new->str = NULL;
+		new->str = strdup("");
 	else
 	{
 		new->str = strdup(str);
