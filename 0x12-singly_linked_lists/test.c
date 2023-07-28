@@ -30,7 +30,7 @@ int main(void)
 	head = NULL;
 	for (i = 0; strings[i]; ++i)
 	{
-		ptr = add_node(&head, strings[i]);
+		ptr = add_node_end(&head, strings[i]);
 		if (!ptr || !ptr->str)
 		{
 			printf("Failed\n");
