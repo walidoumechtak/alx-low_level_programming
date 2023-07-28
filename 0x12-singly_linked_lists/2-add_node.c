@@ -29,6 +29,7 @@ void	free_all(list_t **head)
 	{
 		free((*head)->str);
 		(*head) = (*head)->next;
+		free(*head);
 	}
 }
 
