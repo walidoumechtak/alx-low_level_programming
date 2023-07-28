@@ -29,7 +29,6 @@ void	free_all(list_t **head)
 	{
 		free((*head)->str);
 		(*head) = (*head)->next;
-		free(*head);
 	}
 }
 
@@ -50,11 +49,9 @@ list_t *add_node(list_t **head, const char *str)
 	if (!str)
 		new->str = strdup("");
 	else
-	{
 		new->str = strdup(str);
-		if (!new->str)
-			return (free_all(head), NULL);
-	}
+	if (!new->str)
+		return (free_all(head), free(new), NULL);
 	new->len = _strlen(str);
 	if (head == NULL)
 		head = &new;
