@@ -19,6 +19,20 @@ int	_strlen(const char *str)
 }
 
 /**
+ * free_all - free all node for a linkedlist
+ * @head: the of the linked list
+ */
+
+void	free_all(list_t **head)
+{
+	while (*head != NULL)
+	{
+		free((*head)->str);
+		(*head) = (*head)->next;
+	}
+}
+
+/**
  * add_node - func that a node to the beginning of linked list
  * @head: the head of linked list
  * @str: string content of the node
@@ -31,11 +45,15 @@ list_t *add_node(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (!new)
-		return (NULL);
+		return (free_all(head), NULL);
 	if (!str)
 		new->str = NULL;
 	else
+	{
 		new->str = strdup(str);
+		if (!new->str)
+			return (free_all(head), NULL);
+	}
 	new->len = _strlen(str);
 	if (head == NULL || !*head)
 		head = &new;
