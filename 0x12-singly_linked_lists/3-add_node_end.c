@@ -47,3 +47,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	temp->next = new;
 	return (new);
 }
+
+int	main()
+{
+	list_t *head;
+
+	head = NULL;
+
+	add_node_end(&head, "walid");
+	print_list(head);
+	return (0);
+}
