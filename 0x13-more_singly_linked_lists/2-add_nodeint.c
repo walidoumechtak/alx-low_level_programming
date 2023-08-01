@@ -13,7 +13,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	new = malloc(sizeof(listint_t));
 	if (!new)
-		return (free_all(*head), NULL);
+		return (NULL);
 	new->n = n;
 	new->next = NULL;
 	if (head == NULL)
@@ -22,5 +22,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (new);
 	}
 	new->next = *(head);
+	*head = new;
 	return (new);
 }
