@@ -1,4 +1,4 @@
-#inlcude "lists.h"
+#include "lists.h"
 
 /**
  * sum_listint - sum of all n in linkedlist
@@ -10,10 +10,10 @@ int sum_listint(listint_t *head)
 {
 	int	sum;
 
-	if (!head || !*head)
+	if (!head || !head)
 		return (0);
 	sum = 0;
-	while (*head)
+	while (head)
 	{
 		sum += head->n;
 		head = head->next;
