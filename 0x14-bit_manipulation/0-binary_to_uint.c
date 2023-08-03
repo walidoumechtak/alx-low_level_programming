@@ -22,6 +22,36 @@ int	check_all_string(const char *s)
 }
 
 /**
+ * pow2 - func that calc the poewr of number
+ * @nb: the base
+ * @power: poewr of
+ * Return: the power of nb by power
+ */
+
+int	pow2(int nb, int power)
+{
+	int	i;
+	int	pow;
+
+	if (nb == 0 && power == 0)
+		return (1);
+	if (power == 0)
+		return (1);
+	if (power == 1)
+		return (nb);
+	if (power < 0)
+		return (0);
+	i = 0;
+	pow = 1;
+	while (i < power)
+	{
+		pow = pow * nb;
+		i++;
+	}
+	return (pow);
+}
+
+/**
  * binary_to_uint - func that converts a binary number to an unsigned int
  * @b: the binarya number
  * Return: the conveted number
@@ -41,7 +71,7 @@ unsigned int binary_to_uint(const char *b)
 	while (b[i])
 	{
 		if (b[i] == '1')
-			res += 1 * (int)pow(2, s);
+			res += 1 * pow2(2, s);
 		s++;
 		i--;
 	}
