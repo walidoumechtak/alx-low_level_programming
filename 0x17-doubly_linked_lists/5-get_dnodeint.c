@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * head: the head of DLL
- * index: the index of desierd node
+ * get_dnodeint_at_index - functio thats it
+ * @head: the head of DLL
+ * @index: the index of desierd node
  * Return: the searched node
  */
 
