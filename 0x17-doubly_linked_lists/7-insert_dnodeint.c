@@ -5,6 +5,7 @@
  * @h: the addr of the head
  * @idx: the place where to insert the new node
  * @n: the value of data n inside the node
+ * Return: the new node
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
@@ -24,20 +25,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	i = 0;
 	if (!h || !*h)
 		return (NULL);
-	else
+	while (temp->next)
 	{
-		while (temp->next)
-		{
-			if (i == idx)
-				break;
-			i++;
-			temp = temp->next;
-		}
-		pv = temp->prev;
-		new->next = temp;
-		new->prev = temp->prev;
-		pv->next = new;
-		temp->prev = new;
+		if (i == idx)
+			break;
+		i++;
+		temp = temp->next;
 	}
+	pv = temp->prev;
+	new->next = temp;
+	new->prev = temp->prev;
+	pv->next = new;
+	temp->prev = new;
+
 	return (new);
 }
