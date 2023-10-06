@@ -28,11 +28,11 @@ void hash_table_print(const hash_table_t *ht)
 			i++;
 		else
 		{
-			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
 			if (i < cpt - 1)
 				printf(", ");
 			i++;
 		}
 	}
-	printf("}");
+	printf("}\n");
 }
